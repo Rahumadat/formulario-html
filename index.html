@@ -7,52 +7,71 @@
     <title>Registration Form</title>
 </head>
 <body>
-    <H1>Registration Form</H1>
-    <Section>
-        <label for="bold"><strong>First Name: * </strong></label>
-        <input type="text" name="first_name">
-        <p></p>
-    </Section>
-    <Section>
-        <label for="bold"><strong>Last Name: * </strong></label>
-        <input type="text" name="last_name">
-        <p></p>
-    </Section>
-    <Section>
-        <label for="bold"><strong>Email Addres: * </strong></label>
-        <input type="email" name="email_addres">
-    </Section>
-    <Section>
-        <label for="bold"><strong>Password: * </strong></label>
-        <input type="password" name="password">
-        <p></p>
-    </Section>
-    <Section>
-        <label for="bold"><strong>Birthday: * </strong></label>
-        <input type="date" name="date">
-        <p></p>
-    </Section>
-    <Section>
-        <label for="bold"><strong>Gender Identity: </strong></label>
-        <p></p>
-    </Section>
-    <Section>
-        <input type="radio" name="male" value="bold" id="male">
-        <label for="bold"><strong>Male</strong></label>
-        <input type="radio" name="female" value="bold" id="female">
-        <label for="bold"><strong>Female</strong></label>
-        <input type="radio" name="non-binary" value="bold" id="n-b">
-        <label for="bold"><strong>Non-Binary</strong></label>
-        <input type="radio" name="non-answer" value="bold" id="n-a">
-        <label for="bold"><strong>I preffer not to answer</strong></label>
-    </Section>
-    <section>
-        <label for="bold"><strong>A short description about myself</strong></label>
-        <p></p>
-    </section>
-    <section>
-        <textarea name="myself" cols="40" rows="3"></textarea>
-    </section>
+    <form action="/process" method="post">
+        <H1>Registration Form</H1>
+        <div>
+            <label for="bold"><strong>First Name: * </strong></label>
+            <input type="text" name="first_name" required>
+            <p></p>
+        </div>
+        <div>
+            <label for="bold"><strong>Last Name: * </strong></label>
+            <input type="text" name="last_name" required>
+            <p></p>
+        </div>
+        <div>
+            <label for="bold"><strong>Email Addres: * </strong></label>
+            <input type="email" name="email_addres" required>
+        </div>
+        <div>
+            <label for="bold"><strong>Password: * </strong></label>
+            <input type="password" name="password" required>
+            <p></p>
+        </div>
+        <div>
+            <label for="bold"><strong>Birthday: * </strong></label>
+            <input type="date" name="date" required>
+            <p></p>
+        </div>
+        <div>
+            <label for="bold"><strong>Gender Identity: </strong></label>
+        </div>
+        <div>
+            <input type="radio" name="male" value="bold" id="male">
+            <label for="bold"><strong>Male</strong></label>
+            <input type="radio" name="female" value="bold" id="female">
+            <label for="bold"><strong>Female</strong></label>
+            <input type="radio" name="non-binary" value="bold" id="n-b">
+            <label for="bold"><strong>Non-Binary</strong></label>
+            <input type="radio" name="non-answer" value="bold" id="n-a">
+            <label for="bold"><strong>I preffer not to answer</strong></label>
+        </div>
+        <br>
+        <div>
+            <label for="bold"><strong>A short description about myself</strong></label>
+            <p></p>
+        </div>
+        <div>
+            <textarea name="myself" cols="40" rows="3"></textarea>
+        </div>
+        <div>
+            <label for="bold"><strong>Favorite Languaje</strong></label>
+            <select name="languaje" required>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>C-Sharp</option>
+                <option>Ruby</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" name="accept" id="accept">
+            <label for="bold"><strong>Yes, I would like to receive periodic email updates</strong></label>
+        </div>
+        <div>
+            <input type="submit" value="Create Account" >
+        </div>
+        <p>* Indicate a required field</p>
+    </form>
     
 </body>
 </html>
